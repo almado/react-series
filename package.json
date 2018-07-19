@@ -19,6 +19,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
     "jest": "^23.4.1",
     "react-addons-test-utils": "^15.6.2",
     "webpack": "^2.2.1",
@@ -29,6 +30,12 @@
     "test": "jest --watch --coverage"
   },
   "jest": {
+    "setupFiles": [
+      "./jest-config.js"
+    ],
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ],
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
     }

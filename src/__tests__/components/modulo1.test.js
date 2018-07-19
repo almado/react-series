@@ -1,4 +1,4 @@
-const time = require('../../components/modulo1')
+import time from '../../components/modulo1';
 
 describe('basic feature', () => {
     test('should return a div', () => {
